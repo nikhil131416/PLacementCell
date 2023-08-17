@@ -1,0 +1,24 @@
+#container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+
+form{
+    width: 50%;
+}
+
+td input{
+    width: 70%;
+}
+
+#submit{
+    width: 150px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 5px;
+}

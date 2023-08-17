@@ -1,0 +1,27 @@
+<form action="/students/create" method="POST">
+    <input value="<%= student.name %>" type="text" name="name" placeholder="name" required>
+    <input value="<%= student.email %>" type="email" name="email" placeholder="Email" required>
+    <input value="<%= student.batch %>" type="text" name="batch" placeholder="batch" required>
+    <input value="<%= student.college %>" type="text" name="college" placeholder="College name" required>
+
+    <select name="status" required>
+        <% if (student.status == "placed") { %>
+            <option value="placed" selected>Placed</option>
+        <% } else {%>
+            <option value="placed">Placed</option>
+        <% } %>
+
+        <% if (student.status == "not placed") { %>
+            <option value="not placed" selected >Not Placed</option>
+        <% } else {%>
+            <option value="not placed">Not Placed</option>
+        <% } %>
+    </select>
+
+    <input value="<%= student.dsa_score %>" type="number" name="dsa_score" placeholder="Dsa Score" required>
+    <input value="<%= student.webd_score %>" type="number" name="webd_score" placeholder="WebD Score" required>
+    <input value="<%= student.react_score %>" type="number" name="react_score" placeholder="React Score" required>
+
+    <input type="submit" value="Submit">
+
+</form>

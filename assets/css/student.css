@@ -1,0 +1,13 @@
+td input{
+    width: 70%;
+}
+
+#student-submit{
+    width: 150px;
+    margin-left: 50%;
+    transform: translate(-50%);
+    background-color: #0d6efd;
+    color: white;
+    border: none;
+    padding: 5px;
+}

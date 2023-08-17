@@ -1,0 +1,145 @@
+
+
+<link rel="stylesheet" href="/css/student.css">
+
+<% if (student) { %>
+ 
+    <form action="/students/create" method="POST" style="
+        width: 70%;
+        margin: auto;" class="p-5">
+        <table class="table table-striped border">
+            <tbody>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="name" value="<%= student.name %>" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="email" value="<%= student.email %>" required>
+                </td>
+            </tr>
+            <tr>
+                <td>College</td>
+                <td>
+                    <input type="text" name="college" value="<%= student.college %>" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Batch</td>
+                <td>
+                    <input type="text" name="batch" value="<%= student.batch %>" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>
+                    <select name="status" required>
+                        <% if(student.status == "placed"){ %>
+                            <option value="placed" selected>Placed</option>
+                        <% }else {%>
+                            <option value="placed">Placed</option>
+                        <% } %>
+
+                        <% if(student.status == "not placed"){ %>
+                            <option value="not placed" selected>Not Placed</option>
+                        <% }else {%>
+                            <option value="not placed">Not Placed</option>
+                        <% } %>  
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>DSA score</td>
+                <td>
+                    <input type="number" name="dsa_score" value="<%= student.dsa_score %>" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Web development score</td>
+                <td>
+                    <input type="number" name="webd_score" value="<%= student.webd_score %>" required>
+                </td>
+            </tr>
+            <tr>
+                <td>React score</td>
+                <td>
+                    <input type="number" name="react_score" value="<%= student.react_score %>" required>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    
+        <input id="student-submit" type="submit" value="Update">
+    </form>
+
+<% }else {%> 
+    <form action="/students/create" method="POST" style="
+        width: 70%;
+        margin: auto;" class="p-5">
+        <table class="table table-striped border">
+            <tbody>
+            <tr>
+                <td>Name</td>
+                <td>
+                    <input type="text" name="name" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td>
+                    <input type="email" name="email"  required>
+                </td>
+            </tr>
+            <tr>
+                <td>College</td>
+                <td>
+                    <input type="text" name="college" required>
+                </td>
+            </tr>
+            <tr>
+                <td>Batch</td>
+                <td>
+                    <input type="text" name="batch"  required>
+                </td>
+            </tr>
+            <tr>
+                <td>Status</td>
+                <td>
+                    <select name="status" required>
+                        <option value="placed">Placed</option>
+                        <option value="not placed">Not Placed</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>DSA score</td>
+                <td>
+                    <input type="number" name="dsa_score"  required>
+                </td>
+            </tr>
+            <tr>
+                <td>Web development score</td>
+                <td>
+                    <input type="number" name="webd_score"  required>
+                </td>
+            </tr>
+            <tr>
+                <td>React score</td>
+                <td>
+                    <input type="number" name="react_score" required>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    
+        <input id="student-submit" type="submit" value="Create">
+    </form>
+<% } %>   
+
+
+<script>
+    li[1].style.borderBottom = "2px solid white";
+</script>

@@ -1,0 +1,84 @@
+
+
+body{
+    background-color: black;
+    font-size: 1.2rem;
+}
+
+a, a:hover{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form>h1{
+    margin-bottom: 20px;
+}
+
+.container form{
+    width: fit-content;
+    min-height: 500px;
+    height: fit-content;
+    padding: 20px 100px;
+    background-color: rgba(255, 255, 255, 0.959);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    text-align: left;
+}
+
+form div label{
+    display: inline-block;
+    width: fit-content;
+}
+
+form div input{
+    border: none;
+    border-bottom: 1px solid black;
+    background-color: transparent;
+    width: 300px;
+    font-size: 1rem;
+}
+
+input:focus{
+    outline: none;
+}
+
+form div button{
+    width: 300px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+form div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#signup-page-link{
+    font-size: 1rem;
+}
+
+#signup-page-link a{
+    text-decoration: none;
+    color: black;
+    border-bottom: 1px solid black;
+    cursor: pointer;
+}
