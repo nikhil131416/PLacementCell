@@ -35,7 +35,7 @@ app.use(session({
     },
     store: MongoStore.create(
         {
-            mongoUrl: 'mongodb://127.0.0.1:27017/placement_cell',
+            mongoUrl: 'mongodb+srv://pankaj3112:ftHLwuuPqJvyE9Qj@cluster0.lm6iyo2.mongodb.net/?retryWrites=true&w=majority',
             autoRemove: 'disabled'
         },
         function(err){
