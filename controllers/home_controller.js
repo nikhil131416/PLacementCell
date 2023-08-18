@@ -1,7 +1,7 @@
 const Student = require('../models/student');
 const Interview = require('../models/interview');
 
-
+//render homepage/dashboard with all students and interviews
 module.exports.home = async function(req, res){
     try {
         let students = await Student.find({}).populate('interviews.company interviews.result');

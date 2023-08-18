@@ -1,6 +1,7 @@
 const Interview = require('../models/interview');
 const Student = require('../models/student');
 
+// render add interview page
 module.exports.interviews = function(req, res){
     return res.render('interview', {
         title: "Placement Portal| Interview",
@@ -8,6 +9,7 @@ module.exports.interviews = function(req, res){
 }   
 
 
+// creating a interview in db
 module.exports.create = async function(req, res){
     try{
         let interview = await Interview.create({
@@ -33,6 +35,7 @@ module.exports.create = async function(req, res){
 }
 
 
+//deleting a interview from db
 module.exports.destroy = async function(req, res){
 
     try{
@@ -73,6 +76,7 @@ module.exports.destroy = async function(req, res){
 }
 
 
+//alloting a student to the interview
 module.exports.addStudent = async function(req, res){
     try{
         let interview = await Interview.findById(req.params.id);
@@ -131,6 +135,7 @@ module.exports.addStudent = async function(req, res){
 }
 
 
+//removing a student from interview
 module.exports.removeStudent = async function(req, res){
     try{
         let student = await Student.findById(req.params.studentId);

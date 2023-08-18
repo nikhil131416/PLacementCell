@@ -1,6 +1,6 @@
 const User = require('../models/user');
 
-
+// if user not signed up send him to sign up page
 module.exports.signUp = function(req, res){
     if (req.isAuthenticated()) {
         return res.redirect('back');
@@ -12,6 +12,7 @@ module.exports.signUp = function(req, res){
 }
 
 
+// if user is not signed in send him to sign in page
 module.exports.signIn = function(req, res){
     if (req.isAuthenticated()) {
         return res.redirect('back');
@@ -59,6 +60,8 @@ module.exports.createSession = function(req, res){
     return res.redirect('/');
 }
 
+
+//logging out a user
 module.exports.destroySession = function(req, res){
     req.logout(function(err) {
         req.flash('error', "Something went wrong");

@@ -1,6 +1,8 @@
 const Student = require('../models/student');
 const Interview = require('../models/interview');
 
+
+// rendering add student/update student page 
 module.exports.students = async function(req, res){
     if(req.query.id){
         let student = await Student.findById(req.query.id);
@@ -16,6 +18,8 @@ module.exports.students = async function(req, res){
     });
 }
 
+
+//creating a student in db
 module.exports.create = async function(req, res){
 
     try {
@@ -68,6 +72,7 @@ module.exports.create = async function(req, res){
 }
 
 
+//removing a student from db
 module.exports.destroy = async function(req, res){
     try {
         let student = await Student.findById(req.query.id);
@@ -105,6 +110,7 @@ module.exports.destroy = async function(req, res){
 }
 
 
+//update student info
 module.exports.update = async function(req, res){
 
     try{

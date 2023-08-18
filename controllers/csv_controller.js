@@ -2,6 +2,8 @@ const fs = require("fs");
 const path = require("path");
 const Student = require("../models/student");
 
+
+// function to export data of students as a csvfile
 module.exports.export = async function (req, res) {
   try {
     const allStudents = await Student.find({}).populate('interviews.company interviews.result');

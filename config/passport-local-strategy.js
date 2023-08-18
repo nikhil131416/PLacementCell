@@ -2,6 +2,7 @@ const passport = require('passport');
 const LocalStrategy = require('passport-local');
 const User = require('../models/user');
 
+//authentication using passport
 passport.use(new LocalStrategy({
         usernameField: 'email',
         passReqToCallback: true
