@@ -1,13 +1,9 @@
 # Placement Cell
 An interface for the employees of the company to fill in the data of students and interviews into the database and then download it in CSV
 format.
-
+by nikhil dodtalle
 ## Installation
 To install Placement Cell, please follow these steps:
-
-Clone this repository using the following command:
-```
-$ git clone https://github.com/Pankaj3112/PlacementCell.git
 ```
 Install the required dependencies using the following command:
 ```
